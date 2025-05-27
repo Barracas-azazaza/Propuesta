@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Valor y Ajuste Salarial: Ingeniero Camilo Barragán - Grupo DG</title>
+    <style>
+        /* Google Fonts Import */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap');
+
+        /* Grupo DG Branding & General Styles */
+        :root {
+            --dg-dark-blue: #1A2E40; /* Azul oscuro principal de Grupo DG */
+            --dg-orange-accent: #FF4D00; /* Naranja vibrante de Grupo DG */
+            --dg-light-grey-bg: #f8f9fa; /* Gris muy claro para fondos */
+            --dg-text-dark: #212529; /* Texto oscuro principal */
+            --dg-text-light: #495057; /* Texto secundario más claro */
+            --dg-white: #ffffff;
+            --dg-success-green: #2dce89; /* Mantenemos verde para cifras y WhatsApp */
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: var(--dg-text-light); 
+            background-color: var(--dg-light-grey-bg); 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main {
+            width: 90%;
+            max-width: 980px; 
+            margin: 40px auto;
+            padding: 0; 
+            background-color: transparent;
+        }
+
+        header {
+            background: var(--dg-dark-blue); 
+            color: var(--dg-white);
+            padding: 60px 0px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+            margin-bottom: 40px; 
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8em; 
+            margin: 0;
+            font-weight: 700; /* Ajuste de peso para un look más Grupo DG */
+            letter-spacing: 0.5px;
+        }
+         header .subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3em;
+            margin-top: 15px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .intro {
+            font-size: 1.2em; 
+            color: var(--dg-text-dark); 
+            text-align: left; 
+            margin-bottom: 40px;
+            padding: 30px; /* Más padding */
+            background-color: var(--dg-white);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        section {
+            background-color: var(--dg-white); 
+            margin-bottom: 40px; 
+            padding: 35px; 
+            border-radius: 12px; 
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06); 
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            overflow: hidden; 
+        }
+
+        section:hover {
+            transform: translateY(-6px) scale(1.005); 
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em; 
+            color: var(--dg-text-dark); 
+            margin-top: 0;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 4px solid var(--dg-orange-accent); 
+            display: inline-block; 
+            font-weight: 700;
+        }
+        
+        section p, section li {
+            font-size: 1.05em;
+            color: var(--dg-text-light);
+            margin-bottom: 15px; 
+        }
+        section strong { /* Para resaltar texto dentro de párrafos */
+            font-weight: 600;
+            color: var(--dg-text-dark);
+        }
+
+        section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        section ul li {
+            padding-left: 30px;
+            position: relative;
+        }
+        section ul li::before {
+            content: '✔';
+            color: var(--dg-orange-accent); /* Viñetas con acento DG */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.3em;
+            top: 2px;
+        }
+        
+        .cv-highlight {
+            font-size: 0.95em;
+            font-style: italic;
+            color: #6c757d; /* Gris más estándar para notas */
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #ced4da;
+        }
+
+        .performance-highlight {
+            background-color: #fff3e0; /* Naranja muy pálido */
+            border: 2px solid var(--dg-orange-accent); 
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .performance-highlight h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dg-orange-accent); 
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .performance-highlight p {
+            font-size: 1.15em;
+            color: var(--dg-text-dark); 
+            margin-bottom: 10px;
+        }
+        .performance-highlight strong { /* Cifras clave dentro del highlight */
+            font-weight: 700;
+            font-size: 1.25em; 
+            color: var(--dg-orange-accent);
+        }
+
+        .justification-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .justification-point {
+            flex: 1;
+            min-width: 280px; 
+            padding: 25px;
+            border-radius: 10px;
+            background-color: var(--dg-light-grey-bg);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            border-top: 5px solid var(--dg-orange-accent); 
+        }
+
+        .justification-point h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            color: var(--dg-orange-accent); 
+        }
+        .justification-point h4::before {
+            content: '🎯'; 
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .justification-point ul li::before { /* Viñetas internas de justification points */
+            content: '›';
+            color: var(--dg-orange-accent);
+            position: absolute;
+            left: 5px;
+            font-weight: bold;
+            font-size: 1.5em;
+            top: -2px;
+        }
+
+        #propuesta {
+            background: var(--dg-light-grey-bg); 
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+            text-align: center; 
+        }
+
+        #propuesta h2 { /* Hereda el estilo general de section h2 */
+            color: var(--dg-text-dark);
+            border-bottom-color: var(--dg-orange-accent); 
+        }
+        #propuesta .salary-request {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em; 
+            color: var(--dg-success-green); 
+            font-weight: 700; /* Más peso para la cifra */
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--dg-white);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(45, 206, 137, 0.15);
+        }
+         #propuesta p {
+            font-size: 1.15em;
+            color: var(--dg-text-light);
+            max-width: 700px;
+            margin: 0 auto 20px auto; 
+         }
+
+        .call-to-action {
+            font-size: 1.25em;
+            color: var(--dg-text-dark);
+            text-align: center;
+            margin-top: 30px; 
+            padding: 25px; 
+            background-color: #ffe8cc; /* Naranja muy, muy pálido */
+            border-radius: 10px;
+            border: 1px solid var(--dg-orange-accent);
+            font-weight: 600;
+        }
+        .call-to-action strong {
+            font-weight: 700;
+            color: var(--dg-orange-accent);
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background-color: var(--dg-success-green);
+            color: white;
+            padding: 15px 30px;
+            margin-top: 25px;
+            border-radius: 50px; 
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: #1DA851; 
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+        }
+      
+        footer {
+            text-align: center;
+            padding: 40px 0px;
+            margin-top: 50px;
+            background-color: var(--dg-dark-blue); 
+            color: #adb5bd; 
+            width: 100%;
+        }
+        footer p { margin: 0; font-size: 1em; }
+
+        @media (max-width: 992px) {
+            header h1 { font-size: 2.3em; }
+            section h2 { font-size: 2em; }
+            .subsection h3 { font-size: 1.5em; }
+        }
+        @media (max-width: 768px) {
+            main { width: 95%; padding: 0 10px; }
+            header { padding: 50px 20px; } 
+            header h1 { font-size: 2em; }
+            section { padding: 25px; }
+            section h2 { font-size: 1.8em; }
+            .justification-container { flex-direction: column; }
+            #propuesta .salary-request { font-size: 2em; }
+            .call-to-action { font-size: 1.15em; padding: 25px; }
+            .whatsapp-button { padding: 12px 25px; font-size: 1em;}
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.8em; }
+            header .subtitle {font-size: 1.1em;}
+            section { padding: 20px; }
+            section h2 { font-size: 1.6em; }
+            .intro { font-size: 1.05em; padding: 20px; }
+            .call-to-action { font-size: 1.1em; padding: 20px;}
+            .performance-highlight h3 {font-size: 1.6em;}
+            #propuesta .salary-request { font-size: 1.8em; }
+            .whatsapp-button { padding: 10px 20px; font-size: 0.95em;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Propuesta de Valor y Ajuste Salarial</h1>
+        <p class="subtitle">Ingeniero Camilo Andrés Barragán Gómez</p>
+    </header>
+    <main>
+        <section class="intro">
+            <p>Estimada Gerente María del Socorro,</p>
+            <p>Me dirijo a usted con el mayor respeto y entusiasmo para presentar una reflexión sobre mi desempeño y contribuciones recientes a <strong>Grupo DG</strong>, y con base en ello, solicitar una revisión de mi compensación salarial. Mi objetivo es continuar aportando valor excepcional a la empresa, y considero que un ajuste salarial reflejaría de manera más precisa mi impacto y compromiso.</p>
+            <p>Desde mi incorporación y especialmente en el período reciente (desde el 18 de febrero hasta el 23 de mayo), he asumido una amplia gama de responsabilidades y proyectos críticos para <strong>Grupo DG</strong>, operando con una jornada de 4 horas diarias.</p>
+        </section>
+
+        <section id="rendimiento-destacado">
+            <h2>Rendimiento Excepcional en Grupo DG: Impacto Cuantificable</h2>
+            <p>Durante el periodo comprendido entre el 18 de febrero y el 23 de mayo de 2024 (<strong>69 días laborables</strong>), he dedicado <strong>276 horas cronológicas</strong> (4 horas/día) a un conjunto extenso y diverso de 77 tareas específicas para <strong>Grupo DG</strong>. Este volumen de trabajo, que incluye desde desarrollos de software a medida, creación de un ERP interno, automatizaciones complejas, hasta la gestión de múltiples plataformas y la resolución de problemas técnicos avanzados, normalmente requeriría:</p>
+            
+            <div class="performance-highlight">
+                <h3>Eficiencia Comprobada para Grupo DG</h3>
+                <p>El valor generado para <strong>Grupo DG</strong> equivale a <strong>800 horas efectivas</strong> de un desarrollador estándar.</p>
+                <p>Mi productividad por hora es aproximadamente <strong>2.9 veces superior</strong> al estándar de la industria.</p>
+                <p>En mis 4 horas diarias, produzco para <strong>Grupo DG</strong> lo que a un desarrollador promedio le tomaría casi <strong>12 horas</strong>.</p>
+                <p>Completé en solitario una carga de trabajo que usualmente se asignaría a un <strong>equipo de 2-3 personas</strong>, quienes requerirían aproximadamente <strong>11 semanas</strong> a tiempo completo.</p>
+            </div>
+
+            <p>Esta eficiencia no solo se traduce en una rápida ejecución de los proyectos de <strong>Grupo DG</strong>, sino también en la capacidad de abordar múltiples frentes simultáneamente, optimizando recursos y tiempos para la empresa.</p>
+        </section>
+
+        <section id="contribuciones-clave">
+            <h2>Contribuciones Clave y Valor Agregado para Grupo DG</h2>
+            <p>Mi labor en <strong>Grupo DG</strong> se ha enfocado en aportar soluciones estratégicas y sostenibles para la empresa:</p>
+            <div class="justification-container">
+                <div class="justification-point">
+                    <h4>Innovación y Soluciones a Medida</h4>
+                    <ul>
+                        <li>Desarrollo completo del <strong>ERP interno en WordPress</strong>, optimizando procesos clave para <strong>Grupo DG</strong>.</li>
+                        <li>Creación de <strong>plugins personalizados para WordPress</strong> (ej. flujo de aprobaciones de permisos, gestión de archivos vinculada a formularios). Gracias al compromiso con <strong>principios SOLID</strong>, estos plugins son robustos, fáciles de mantener y modificar. Incluso se han desarrollado con interfaces visuales dentro de WordPress para que el personal de <strong>Grupo DG</strong> pueda realizar ajustes sin necesidad de tocar código, agilizando cambios futuros y reduciendo la dependencia técnica.</li>
+                        <li>Implementación de <strong>scripts en Google Apps Script</strong> para mailings estilizados y sincronización con hojas de cálculo, mejorando la comunicación interna y el seguimiento de procesos en <strong>Grupo DG</strong>.</li>
+                        <li>Diseño y despliegue de la arquitectura del sitio web en Azure para un cliente clave como el <strong>Banco Agrario de Colombia</strong>, aportando una solución cloud moderna y escalable gestionada desde <strong>Grupo DG</strong>.</li>
+                    </ul>
+                </div>
+                <div class="justification-point">
+                    <h4>Eficiencia Operativa y Automatización</h4>
+                    <ul>
+                        <li><strong>Automatizaciones en ClickUp</strong> para agilizar la gestión de proyectos y tareas específicas de los equipos de <strong>Grupo DG</strong>.</li>
+                        <li>Soy muy cumplido con los tiempos de trabajo que se me asignan en ClickUp, asegurando la entrega oportuna de los proyectos.</li>
+                        <li>Reducción de tiempos y costos para <strong>Grupo DG</strong> al internalizar desarrollos complejos que de otra forma requerirían la contratación de proveedores externos.</li>
+                        <li>Resolución proactiva de problemas técnicos y <strong>mejora continua de los procesos digitales</strong> implementados en <strong>Grupo DG</strong>.</li>
+                         <li>Adaptabilidad para trabajar en múltiples proyectos de <strong>Grupo DG</strong> simultáneamente, manteniendo siempre la calidad y los plazos.</li>
+                    </ul>
+                </div>
+                 <div class="justification-point">
+                    <h4>Versatilidad y Sólida Base Técnica Aplicada</h4>
+                    <ul>
+                        <li>Dominio de un amplio stack tecnológico puesto al servicio de <strong>Grupo DG</strong>: <strong>PHP (WordPress), JavaScript, Python, Google Apps Script, HTML, CSS, SQL, APIs, Azure.</strong></li>
+                        <li>Mi capacidad general para el aprendizaje rápido y la aplicación de nuevas tecnologías es un activo que pongo a disposición para futuros desafíos en <strong>Grupo DG</strong>.</li>
+                        <li>Si bien mi experiencia previa incluye áreas como análisis de datos y Machine Learning, estoy enfocado en aplicar mis habilidades de desarrollo y automatización para las necesidades actuales de <strong>Grupo DG</strong>.</li>
+                    </ul>
+                </div>
+                <div class="justification-point">
+                    <h4>Compromiso, Calidad y Proactividad</h4>
+                    <ul>
+                        <li>Disponibilidad para enfrentar <strong>desafíos complejos específicos de Grupo DG</strong> y encontrar soluciones efectivas, incluso operando con una jornada de 4 horas.</li>
+                        <li>Iniciativa para proponer mejoras y optimizaciones en los sistemas y flujos de trabajo de <strong>Grupo DG</strong>.</li>
+                        <li>Un estándar de calidad en mi trabajo que se fundamenta, entre otras cosas, en mi destacado desempeño académico, como lo evidencia mi puntuación en las Pruebas Saber Pro, <strong>posicionándome como uno de los mejores ingenieros del país en el año de mi presentación</strong>. Este nivel de excelencia se traduce directamente en soluciones robustas y bien ejecutadas para <strong>Grupo DG</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <p class="cv-highlight"><em>Mi hoja de vida adjunta detalla la amplitud de mi experiencia y habilidades, que sustentan mi capacidad para ofrecer el nivel de rendimiento descrito y adaptarme a los retos que <strong>Grupo DG</strong> presente.</em></p> -->
+        </section>
+
+        <section id="propuesta">
+            <h2>Propuesta de Ajuste Salarial</h2>
+            <p>Considerando mi desempeño específico en <strong>Grupo DG</strong>, la complejidad y el volumen de las responsabilidades asumidas para la empresa, el valor estratégico que aporto y mi eficiencia demostrada, solicito formalmente una revisión de mi compensación salarial.</p>
+            <p>Mi aspiración salarial es de:</p>
+            <div class="salary-request">
+                $3.500.000 COP
+            </div>
+            <p>Este monto refleja no solo mi contribución actual a <strong>Grupo DG</strong>, sino también mi potencial para seguir impulsando el crecimiento y la innovación dentro de la empresa. Un salario competitivo me permitirá mantener mi enfoque y dedicación al máximo nivel, asegurando que <strong>Grupo DG</strong> continúe beneficiándose de un profesional altamente productivo y comprometido.</p>
+        </section>
+
+        <section id="evaluacion">
+            <h2>Solicitud de Evaluación y Siguientes Pasos</h2>
+            <p>Agradezco enormemente la oportunidad de presentarle estos puntos. Estoy convencido del valor que aporto directamente a <strong>Grupo DG</strong> y de mi capacidad para seguir superando las expectativas en los proyectos de la empresa.</p>
+            <p>Le solicito amablemente que evalúe mi rendimiento y esta propuesta. Me gustaría que pudiera considerar esta evaluación conjuntamente con <strong>Karen, mi jefe directa y Directora de TI</strong>, ya que ella tiene una perspectiva cercana de mi trabajo diario y podría aportar una valoración detallada de mi desempeño. Estoy a su completa disposición para conversar más a fondo sobre mis contribuciones a <strong>Grupo DG</strong>, responder cualquier pregunta que pueda tener y discutir cómo podemos seguir trabajando juntos para alcanzar los objetivos de la empresa.</p>
+            <p class="call-to-action">
+                Confío en que, tras su análisis, obtendré una respuesta positiva a esta solicitud. <strong>Agradecería mucho si pudiera tomarse esta semana para analizar la propuesta y tomar una decisión. Espero con optimismo su respuesta.</strong>
+            </p>
+            <div style="text-align: center;">
+                 <a href="https://wa.me/573143002912?text=Hola%20Andr%C3%A9s,%20he%20revisado%20tu%20propuesta%20de%20valor%20y%20ajuste%20salarial.%20Con%20respecto%20a%20ello..." class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+                    Enviar Respuesta por WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© Camilo Andrés Barragán Gómez - Propuesta de Valor para Grupo DG - Mayo 2024</p> <!-- Fecha actualizada -->
+    </footer>
+</body>
+</html>
